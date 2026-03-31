@@ -50,11 +50,17 @@
     <div class="fixed top-0 -right-4 w-96 h-96 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
     <div class="fixed -bottom-8 left-20 w-96 h-96 bg-violet-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-4000"></div>
 
-    <nav class="fixed w-full z-50 top-0 glass shadow-sm">
+    <nav class="fixed w-full z-50 top-0 glass border-b border-emerald-50">
     <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
-        <a href="{{ route('home') }}" class="text-2xl font-extrabold text-emerald-600 tracking-tighter">Web Sederhana</a>
-        
-        <div class="hidden md:flex space-x-8 items-center font-bold text-xs uppercase tracking-widest text-slate-600">
+        <a href="{{ route('home') }}" class="text-2xl font-extrabold text-emerald-600 tracking-tighter transition-transform duration-300 hover:scale-105">
+            FARIS.
+        </a>
+
+        <button id="mobile-menu-button" class="md:hidden text-slate-600 focus:outline-none">
+            <i class="fa-solid fa-bars-staggered text-2xl"></i>
+        </button>
+
+        <div class="hidden md:flex space-x-10 items-center font-bold text-xs uppercase tracking-widest text-slate-600">
             <a href="{{ route('home') }}" class="relative group py-2 hover:text-emerald-600 transition">
                 Home
                 <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
@@ -73,7 +79,32 @@
             </a>
         </div>
     </div>
+
+    <div id="mobile-menu" class="hidden md:hidden glass border-t border-emerald-50 p-6 absolute w-full left-0 animate-fade-in">
+        <div class="flex flex-col space-y-6 font-bold text-sm uppercase tracking-widest text-slate-600">
+            <a href="{{ route('home') }}" class="hover:text-emerald-600 transition">Home</a>
+            <a href="{{ route('cerita') }}" class="hover:text-emerald-600 transition">Cerita</a>
+            <a href="{{ route('kontak') }}" class="hover:text-emerald-600 transition">Kontak</a>
+            <a href="{{ route('tentang') }}" class="hover:text-emerald-600 transition text-emerald-600">Tentang</a>
+        </div>
+    </div>
 </nav>
+
+<script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+    // Nutup menu kalau layar di-resize ke desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+            menu.classList.add('hidden');
+        }
+    });
+</script>
 
     <main class="pt-32 pb-16 flex-grow relative z-10">
         @yield('content')
