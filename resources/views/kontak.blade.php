@@ -39,7 +39,7 @@
             <p class="text-slate-400 text-sm italic">@fariss_andhika</p>
         </a>
 
-        <a href="https://github.com/username_github_lo" target="_blank"
+        <a href="https://github.com/iriske2-dotcom" target="_blank"
            class="group p-8 bg-white rounded-[2rem] border border-slate-100 shadow-xl hover:shadow-emerald-100 hover:-translate-y-2 transition-all duration-300 text-center"
            data-aos="fade-up" data-aos-delay="400">
             <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
