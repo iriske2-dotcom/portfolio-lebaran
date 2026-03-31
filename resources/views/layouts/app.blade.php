@@ -53,7 +53,7 @@
     <nav class="fixed w-full z-50 top-0 glass border-b border-emerald-50">
     <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
         <a href="{{ route('home') }}" class="text-2xl font-extrabold text-emerald-600 tracking-tighter transition-transform duration-300 hover:scale-105">
-            FARIS.
+            Web Sederhana
         </a>
 
         <button id="mobile-menu-button" class="md:hidden text-slate-600 focus:outline-none">
